@@ -1,0 +1,30 @@
+"Games"
+{
+    "tf"
+    {
+        "Signatures"
+        {
+            "CTFSniperRifleClassic::ItemPostFrame()"
+            {
+                "library"   "server"
+                "linux"     "@_ZN21CTFSniperRifleClassic13ItemPostFrameEv"
+            }
+        }
+
+        "MemPatches"
+        {
+
+            // Close to string Player.DenyWeaponSelection and below a GetGroundEntity call
+            "CTFSniperRifleClassic::ItemPostFrame::AllowClassicAirborneShot"
+            {
+                "signature" "CTFSniperRifleClassic::ItemPostFrame()"
+                "linux"
+                {
+                    "offset"    "216h"
+                    "verify"    "\x0F\x84\x2A\x2A\x2A\x2A"
+                    "patch"     "\x90\x90\x90\x90\x90\x90"
+                }
+            }
+        }
+    }
+}
