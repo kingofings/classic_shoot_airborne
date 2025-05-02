@@ -20,7 +20,7 @@
                 "signature" "CTFSniperRifleClassic::ItemPostFrame()"
                 "linux"
                 {
-                    "offset"    "216h"
+                    "offset"    "20Eh"
                     "verify"    "\x0F\x84\x2A\x2A\x2A\x2A"
                     "patch"     "\x90\x90\x90\x90\x90\x90"
                 }
